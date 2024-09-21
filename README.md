@@ -18,5 +18,6 @@ Now install required dependencies for project :<br>
 <br>
 <br>
 <br>
+connect the dataBase server from app 
 At last to run the server write --> npx nodemon src/index.js 
                               
