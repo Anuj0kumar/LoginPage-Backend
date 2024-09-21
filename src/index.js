@@ -12,7 +12,7 @@ app.set("view engine", "ejs");  //use EJS  as view engine
 app.use(express.static("public"));
 
 app.engine('html',require('ejs').renderFile);
-app.set("view engine", "html");  //use EJS  as view engine
+app.set("view engine", "html");  //use HTML  as view engine to render the html files.
 
 
 app.get("/login", (req, res) => {
@@ -31,12 +31,12 @@ app.get("/home", (req, res) => {
     res.render("home1.html");
   });
 
-//resister User
+//resistering User
 
 app.post("/signup", async (req, res) => {
   const data = {
-    name: req.body.username,
-    password: req.body.password,
+    name: req.body.username, //get name from body->username field
+    password: req.body.password, // get pass from body->password field
   };
 //chek if user already exists
 const existingUser = await collection.findOne({name: data.name});
@@ -46,7 +46,7 @@ if (existingUser) {
    } else
    {
         // hash the password using bcrypt
-    const saltRounds = 10;  //number of salt rounds 
+    const saltRounds = 10;  //number of salt rounds to bcrypt
     const hashedPassword = await bcrypt.hash(data.password,saltRounds);
 
     data.password = hashedPassword ; //replace the hash password with original password 
