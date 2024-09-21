@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Website</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="java" href="/script1.js">        
+    
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" >
+        <h1>Welcome to Our E-Commerce Website</h1>
+        <p>Explore our wide range of products and shop with us today!</p>
+        <button>Shop Now</button>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="featured-products">
+        <h2>Featured Products</h2>
+        <div class="product-grid">
+            <% for (let i = 0; i < 3; i++) { %>
+            <div class="product">
+                <img src="product<%= i + 1 %>.jpg" alt="Product <%= i + 1 %>">
+                <h3>Product <%= i + 1 %></h3>
+                <p>$<%= 19.99 + (i * 10) %></p>
+            </div>
+            <% } %>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="call-to-action">
+        <h2>Sign up for our newsletter</h2>
+        <p>Get exclusive offers and discounts!</p>
+        <input type="email" placeholder="Enter your email">
+        <button>Subscribe</button>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2023 E-Commerce Website</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
