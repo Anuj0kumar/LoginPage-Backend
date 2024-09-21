@@ -18,6 +18,7 @@ Now install required dependencies for project :<br>
 <br>
 <br>
 <br>
-connect the dataBase server from app 
+connect the dataBase server from app <br>
+mongodb://localhost:27017/Login-tut --> "Login-tut " is the name of that data-base  on the data-base server
 At last to run the server write --> npx nodemon src/index.js 
                               
